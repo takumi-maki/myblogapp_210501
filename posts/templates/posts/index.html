@@ -10,6 +10,15 @@
     <h4>最新の投稿</h4>
     {% for post in posts.all %}
     {{ post.title }}
+    <br>
+    {{ post.published }}
+    <br>
+    <img src='{{ post.image.url }}' />
+    <br>
+    {{ post.summay }}
+    <br>
+    <br>
+
     {% endfor %}
 </body>
 
