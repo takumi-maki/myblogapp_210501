@@ -6,7 +6,11 @@
 </head>
 
 <body>
-    <h2>これは投稿一覧ページです。</h2>
+    <h2>ようこそ。異世界へ。</h2>
+    <h4>最新の投稿</h4>
+    {% for post in posts.all %}
+    {{ post.title }}
+    {% endfor %}
 </body>
 
 </html>
