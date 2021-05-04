@@ -1,0 +1,13 @@
+server {
+	listen 80;
+	server_name 52.197.128.95;
+
+	location = /favicon.ico {access_log off; log_not_found off;}
+	location /static/ {
+		root /home/ubuntu/myblogapp;
+	}
+	location / {
+		include proxy_params;
+		proxy_pass http://unix:/home/ubuntu/myblogapp/myblogapp.sock;
+	}
+}

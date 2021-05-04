@@ -42,12 +42,11 @@
     </nav>
     <br>
     <div class="container">
-        <div class="main text-center">
-            <h2 class="text-center">ようこそ。異世界へ。</h2>
-            {% load static %}
-            <img src="{% static 'posts/中二病.jpeg' %}" class="img-fluid rounded" style="max-height: 300px;" alt="...">
-            <br>
-        </div>
+        <h2 class="text-center">ようこそ。異世界へ。</h2>
+        {% load static %}
+        <img src="{% static 'posts/中二病.jpeg' %}" class="img-fluid rounded mx-auto d-block" style="max-height: 300px;"
+            alt="...">
+        <br>
         <h4>最新の投稿</h4>
         <br>
         {% for post in posts.all %}
